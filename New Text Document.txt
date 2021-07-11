@@ -1,0 +1,27 @@
+package test;
+import java.util.*;
+public class interace {
+
+	public static void main(String[] args) {
+		Fibiterator iterator=new Fibiterator(4);
+		int n=iterator.next();
+		System.out.println(n);
+	}
+}
+class Fibiterator
+{
+	int input1;
+	Fibiterator(int n)
+	{
+		input1=n;
+	}
+	public int next() 
+	{
+		int input2=input1+1;//5
+		int input3=input1+input2;//9
+		input1=input2;//5
+		input2=input3;//9
+		return input1;
+	}
+	
+}
